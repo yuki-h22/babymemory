@@ -1,0 +1,13 @@
+<%# ・部分テンプレート内で変数を使いたい時 %>
+<%# <%= render partial: ‘tweet’, locals: { tweet: @tweet } %>
+<%# のように、localsオプションを用いて、
+locals: { 部分テンプレート内で使いたい変数: 持っていきたい値 }
+と記述します。
+
+・部分テンプレート内で繰り返し処理を行いたい時 %>
+<%# <%= render partial: ‘tweet’, collection: @tweets %>
+<%# とcollectionオプションに@tweetsと複数形の変数渡すと、部分テンプレートでtweetが個別のインスタンスとして呼ばれる変数となり、さらにeach文を使用せずに繰り返し処理も行ってくれます。 %>
+<%# <%= render @tweets %>
+<%# と略して書くことも可能です。 %>
+
+<%= render partial: ‘tweet’ %>
