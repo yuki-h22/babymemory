@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:update, :edit]
 
   def index
+    @group = Group.new
   end
   
   def new
