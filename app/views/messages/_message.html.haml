@@ -1,0 +1,11 @@
+.main_center_thread{"data-message-id": "#{message.id}"}
+  .main_center_thread_upper-message
+    .main_center_thread_upper-message_name
+      = message.user.name
+    .main_center_thread_upper-message_date
+      = message.created_at.strftime("%Y/%m/%d(%a) %H:%M")
+  .main_center_thread_lower-message
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: "lower-message__image" if message.image.present?
