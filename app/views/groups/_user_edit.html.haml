@@ -1,0 +1,9 @@
+.cloud-wrap.lightseagreen
+  .cloud
+  .text
+    = current_user.name
+.cloud-wrap.olivedrab
+  .cloud
+  .text
+    =link_to edit_user_path(current_user), class: "edit_btn" do
+      = fa_icon 'cog'
