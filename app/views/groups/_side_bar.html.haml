@@ -10,12 +10,15 @@
           %th.text-center お誕生日
           %th.text-center 写真
           %th.text-center 削除
-        - if (@groups != nil)
-          - @groups.each do |group|
+        - if (@groups == nil)
+          - current_user.groups.each do |group|
+            .side_bottom_group
             %tr
               %td
-                %a{:href => "/group/group.id"}= group.name
-              %td= group.birthday
+                =link_to group_messages_path(group) do
+                  = group.name
+              %td
+                = group.birthday
               %td
                 %img{:height => "20", :src => "group.image", :width => "20"}/
               %td
@@ -28,22 +31,8 @@
           %tr
             %td
               .text-center まだ登録されていません
-      = link_to "/groups/new", method: :get
-      %button.btn.btn-default 赤ちゃんが生まれたよ
-  .create_baby.under_box
-    %label{:for => "name"} おなまえ
-    %input.form-control{:name => "name", :type => "text"}/
-    .form-group
-      %label{:for => "price"} お誕生日
-      %input.form-control{:name => "birthday", :type => "text"}/
-    .form-group
-      %label{:for => "image"} 写真
-      %fieldset
-        %div
-          %input#file{:name => "imagefile", :type => "file"}/
-    %button.btn.btn-default{:type => "submit"} 登録
-    %a{:href => "/group"} 戻る
-
+      = link_to new_group_path, class: "new_btn" do
+        %button.btn.btn-default 赤ちゃんが生まれたよ
 
 .side
   .side_top
