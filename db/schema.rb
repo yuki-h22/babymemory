@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20191108074916) do
     t.string   "name",          null: false
     t.string   "birthday",      null: false
     t.string   "image"
+    t.string   "meimei"
     t.string   "mhug"
     t.string   "phug"
     t.string   "fphoto"
