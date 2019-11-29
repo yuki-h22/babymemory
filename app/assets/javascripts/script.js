@@ -17,7 +17,8 @@ $(function() {
 });
 
 $(function(){
-  $('.btn-default').click(function(){
-    $('.under_box').removeClass('create_baby');
+  $('.album_edit').click(function(){
+    $('.album_update').removeClass('hide')
+    $(this).addClass('hide')
   });
-})
+});
