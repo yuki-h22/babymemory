@@ -4,6 +4,7 @@ class CreateGroups < ActiveRecord::Migration[5.0]
       t.string :name, null: false
       t.string :birthday, null: false
       t.string :image
+      t.string :meimei
       t.string :mhug
       t.string :phug
       t.string :fphoto
