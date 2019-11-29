@@ -1,60 +1,108 @@
-$bace_color : #ffffff;
-
-.side{
-  float: right;
-  right: 200px;
-  top: -160px;
-  position: relative;
-  &_top{
-    height: 100px;
-    width: 160px;
-    position: absolute;
-    top: 0px;
-    background-color: #253141;
-    padding: 0px 20px;
-    display: flex;
-    color: $bace_color;
-    font-weight: bold;
-    &_name{
-      font-size: 16px;
-      margin: auto 0;
-    }
-    &_icon{
-      margin: auto 0 auto auto;
-    }
-  }
-  &_bottom{
-    overflow-y: auto;
-    position: absolute;
-    top: 100px;
-    height: calc(100vh - 240px);
-    width: 160px;
-    background-color: #2f3e51;
-    padding: 0px 20px;
-    color: $bace_color;
-    &_group{
-      &_title1{
-        font-size: 15px;
-        padding-top: 20px;
-        padding-bottom: 5px;
-        color: $bace_color;
-        font-weight: bold;
-      }
-      &_text1{
-        font-size: 11px;
-        margin-bottom: 20px;
-        color: $bace_color;
-        font-weight: bold;
-      }
-    }
-  }
-}
-
 .edit_btn{
-  color:$bace_color;
+  color:#fff;
   text-decoration: none
 }
-.new_btn{
-  color:$bace_color;
-  text-decoration: none
+.cloud-wrap{
+  position: relative;
+
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.cloud-wrap:before,
+.cloud-wrap:after{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: currentColor;
+}
+
+.cloud-wrap:before{
+  transform: translate(-50%,-50%) rotate(65deg);
+}
+
+.cloud-wrap:after{
+  transform: translate(-50%,-50%) rotate(-65deg);
+}
+
+.cloud-wrap .cloud{
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: currentColor;
+
+  transform: rotate(0);
+}
+
+.cloud-wrap .cloud:before,
+.cloud-wrap .cloud:after{
+  position: absolute;
+  content: "";
+
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: inherit;
+}
+
+.cloud-wrap .cloud:before{
+  transform: rotate(15deg);
+}
+
+.cloud-wrap .cloud:after{
+  transform: rotate(45deg);
+}
+
+/* テキスト */
+.cloud-wrap .text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: 0;
+  font-size: 1.4em;
+  color: white;
+  /* 単一行 */
+  white-space: nowrap;
+
+  transform: translate(-50%,-50%);
+  z-index: 2;
+}
+
+/* 雲の色 */
+.lightseagreen{
+  color: lightseagreen;
+}
+
+.olivedrab{
+  color: olivedrab; 
+} 
+
+/* アニメーション */
+.cloud-wrap:hover,
+.cloud-wrap:active{
+  animation: cloud_anim 1s ease-in-out infinite alternate;  
+}
+
+@keyframes cloud_anim{
+  0%{
+    transform: translateX(-5%);
+  }
+
+  100%{
+    transform: translateX(5%);
+  }
 }
