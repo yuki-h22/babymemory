@@ -14,12 +14,12 @@
       .album_main_content_title
         初めてのママだっこ
         .album_editbtn
-          %button.album_edit 編集
-        .album_updatebtn
+          %button.album_edit.btn 編集
+        .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
-            = f.label :album_img, class: "album_update hide" do
+            = f.label :album_img, class: "album_update" do
               = f.text_field :mhug, placeholder: "Image Url"
-              = f.submit '送信', class: 'album_update'
+              = f.submit '送信', class: 'album_update, btn'
     .album_main_content
       .album_main_content_img
         %img.album_photo{:src => @group.phug}/
