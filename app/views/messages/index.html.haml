@@ -1,3 +1,22 @@
-.wrapper
-  = render "groups/side_bar"
-  = render "main_chat"
+%body.body
+  %header
+    %h1.head Baby memorY
+  %ul.tab
+    %li.select TOP Page
+    %li ０〜2ヶ月
+    %li ３〜5ヶ月
+    %li ６〜8ヶ月
+    %li ９〜11ヶ月
+    %li １歳〜
+    %li アルバム
+    %li 設定
+  %ul.content
+    %li= render 'top_page'
+    %li.hide 
+    %li.hide 
+    %li.hide 
+    %li.hide 
+    %li.hide 
+    %li.hide= render "main_chat"
+    %li.hide= render 'groups/side_bar'
+  
