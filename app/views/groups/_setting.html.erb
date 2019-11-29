@@ -42,34 +42,21 @@
   </div>
 </div>
 
-<div class = "create_group under_box">
-  <%= form_for @group do |form| %>
-    <%= form.label :name %> 
-      おなまえ
-      <%= form.text_field :name %>
-    <%= form.label :birthday %>
-      <%= form.text_area :birthday%>
-    <%= form.submit %>
-  <% end %>
-          <label for="name">おなまえ</label>
-          <input type="text" class="form-control" name="name">
-      </div>
-      <div class="form-group">
-          <label for="price">お誕生日</label>
-          <input type="text" class="form-control" name="birthday">
-      </div>
-      <div class="form-group">
-          <label for="image">写真</label>
-          <fieldset>
-              <div>
-                  <input id="file" type="file" name="imagefile">
-                  @if ($errors->has('image'))
-                      {{ $errors->first('image') }}
-                  @endif
-              </div>
-          </fieldset>
-      </div>
-      <button type="submit" class="btn btn-default">登録</button>
-      <a href="/group">戻る</a>
-  </form>
+<div class = "create_baby under_box">
+  <label for="name">おなまえ</label>
+  <input type="text" class="form-control" name="name">
+    <div class="form-group">
+      <label for="price">お誕生日</label>
+      <input type="text" class="form-control" name="birthday">
+    </div>
+    <div class="form-group">
+      <label for="image">写真</label>
+      <fieldset>
+        <div>
+          <input id="file" type="file" name="imagefile">
+        </div>
+      </fieldset>
+    </div>
+    <button type="submit" class="btn btn-default">登録</button>
+    <a href="/group">戻る</a>
 </div>
