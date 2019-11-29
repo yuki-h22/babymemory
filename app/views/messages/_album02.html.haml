@@ -1,0 +1,18 @@
+.album
+  .album_top
+    .album_top_title
+      = @group.name
+      生まれてから2ヶ月までのアルバム
+  .album_main
+    .album_main_content
+      .album_main_content_img
+        %img.album_photo{:src => @group.mhug}/
+      .album_main_content_title
+        初めてのママ抱っこ
+        .album_edit_btn
+        
+    .album_main_content
+      .album_main_content_img
+        %img.album_photo{:src => @group.phug}/
+      .album_main_content_title
+        初めてのパパ抱っこ
