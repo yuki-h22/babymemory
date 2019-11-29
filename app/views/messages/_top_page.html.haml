@@ -1,0 +1,25 @@
+.side_bar
+  サイド
+  .side_bar_top
+    top
+    .side_bar_top_image
+      %img#topicon{:src => @group.image}/
+  .side_bar_data
+    .side_bar_data_name
+      = @group.name
+    .side_bar_data_birthday image
+  .side_bar_under
+    .side_bar_under_image
+  .side_bar_bottom
+    .side_bar_bottom_message
+.toppage
+  .toppage_name
+    = @group.name
+    のお部屋
+  .toppage_content
+    コンテンツ
+    .toppage_content_data
+      .toppage_content_data_image 写真
+      .toppage_content_data_title タイトル
+    .toppage_content_comment コメント
+  .toppage_edit_btn ボタン
