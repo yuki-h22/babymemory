@@ -1,0 +1,34 @@
+%head
+  %title Baby memorY
+  %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", :rel => "stylesheet"}/
+  %link{:href => "/css/sass/reset.scss", :rel => "stylesheet"}/
+  %link{:href => "/css/sass/tab.scss", :rel => "stylesheet"}/
+  %link{:href => "/css/sass/main.scss", :rel => "stylesheet"}/
+  %link{:href => "/css/sass/sidebar.scss", :rel => "stylesheet"}/
+  %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
+  %script{:src => "js/script.js"}
+%body
+  %p
+    {{--
+    %script{:src => "js/aa.js"}
+    \--}}
+    %header
+      %h1.head Baby mamorY
+  %ul.tab
+    %li.select TOP Page
+    %li ０〜2ヶ月
+    %li ３〜5ヶ月
+    %li ６〜8ヶ月
+    %li ９〜11ヶ月
+    %li １歳〜
+    %li アルバム
+    %li 設定
+  %ul.content
+    %li @yield('top')
+    %li.hide @yield('photo02')
+    %li.hide @yield('photo35')
+    %li.hide @yield('photo68')
+    %li.hide @yield('photo911')
+    %li.hide @yield('photo1')
+    %li.hide @yield('otheralbum')
+    %li.hide @yield('setting')
