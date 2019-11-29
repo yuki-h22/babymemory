@@ -1,0 +1,25 @@
+.album_photo{
+  width: 500px;
+}
+
+.album{
+  padding: 0px 40px;
+  &_top{
+    text-align: center;
+    
+    &_title{
+      font-size: 40px;
+    }
+  }
+  &_main{
+    display: flex;
+    justify-content: space-between;
+    overflow-y: auto;
+    &_content{
+      &_title{
+        text-align: center;
+        font-size: 20px;
+      }
+    }
+  }
+}
