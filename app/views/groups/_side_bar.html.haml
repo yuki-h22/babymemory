@@ -3,16 +3,14 @@
     .col-md-12
       %h3.ops-title 赤ちゃんたち
   .row
-    .col-md-11.col-md-offset-1
+    .col-md-11.col-md-offset-1.baby_groups
       %table.table.text-center
         %tr
           %th.text-center おなまえ
           %th.text-center お誕生日
           %th.text-center 写真
-          %th.text-center 削除
-        - if (@groups == nil)
           - current_user.groups.each do |group|
-            .side_bottom_group
+            .baby_group
             %tr
               %td
                 =link_to group_messages_path(group) do
@@ -20,32 +18,19 @@
               %td
                 = group.birthday
               %td
-                %img{:height => "20", :src => "group.image", :width => "20"}/
-              %td
-                %form{:action => "/group/group.id", :method => "post"}
-                  %input{:name => "_method", :type => "hidden", :value => "DELETE"}/
-                  %input{:name => "_token", :type => "hidden", :value => "{{ csrf_token() }}"}/
-                  %button.btn.btn-xs.btn-danger{"aria-label" => "Left Align", :type => "submit"}
-                    %span.glyphicon.glyphicon-trash
-        - else
-          %tr
-            %td
-              .text-center まだ登録されていません
-      = link_to new_group_path, class: "new_btn" do
-        %button.btn.btn-default 赤ちゃんが生まれたよ
+                - if @group.image?
+                  = image_tag @group.image
+                - else
+  .row
+    = link_to new_group_path, class: "new_btn" do
+      %button.btn.btn-default 赤ちゃんが生まれたよ
 
 .side
   .side_top
     .side_top_name
       = current_user.name
     .side_top_icon
-      =link_to new_group_path, class: "new_btn" do
-        = fa_icon 'edit'
       =link_to edit_user_path(current_user), class: "edit_btn" do
         = fa_icon 'cog'
-  .side_bottom
-    - current_user.groups.each do |group|
-      .side_bottom_group
-        =link_to group_messages_path(group) do
-          .side_bottom_group_title1
-            = group.name
+
+
