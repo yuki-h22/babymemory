@@ -19,7 +19,8 @@
         - if @group.phug?
           %img.album_photo{:src => @group.phug}/
         - else
-          %img.album_none{:src => '/errer/akatyan02.png'}/
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
         初めてのママだっこ
@@ -48,7 +49,8 @@
         - if @group.phug?
           %img.album_photo{:src => @group.phug}/
         - else
-          %img.album_none{:src => '/errer/akatyan02.png'}/
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
         初めてのママだっこ
