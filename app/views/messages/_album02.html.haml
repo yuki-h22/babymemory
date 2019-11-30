@@ -3,35 +3,64 @@
     .album_top_title
       = @group.name
       が生まれてから2ヶ月までのアルバム
-  .album_main
-    .album_main_content
-      .album_main_content_img
-      - if @group.mhug?
-        %img.album_photo{:src => @group.mhug}/
-      - else
-        %img.album_photo{:src => '/errer/akatyan02.png'}/
-    .album_main_content
-      .album_main_content_img
-      - if @group.mhug?
-        %img.album_photo{:src => @group.mhug}/
-      - else
-        %img.album_photo{:src => '/errer/akatyan02.png'}/
-  .album_main
-    .album_main_title
-      初めてのママだっこ
       .album_editbtn
         %button.album_edit.btn 編集
-      .album_updatebtn.hide
-        = form_for(@group, local: true) do |f|
-          = f.label :album_img, class: "album_update" do
-            = f.text_field :mhug, placeholder: "Image Url"
-            = f.submit '送信', class: 'album_update, btn'
-    .album_main_title
-      初めてのパパだっこ
-      .album_editbtn
-        %button.album_edit.btn 編集
-      .album_updatebtn.hide
-        = form_for(@group, local: true) do |f|
-          = f.label :album_img, class: "album_update" do
-            = f.text_field :mhug, placeholder: "Image Url"
-            = f.submit '送信', class: 'album_update, btn'
+  .album_contents
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.mhug?
+          %img.album_photo{:src => @group.mhug}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.phug?
+          %img.album_photo{:src => @group.phug}/
+        - else
+          %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        初めてのママだっこ
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :mhug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        初めてのパパだっこ
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :phug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.mhug?
+          %img.album_photo{:src => @group.mhug}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.phug?
+          %img.album_photo{:src => @group.phug}/
+        - else
+          %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        初めてのママだっこ
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :mhug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        初めてのパパだっこ
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :phug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
