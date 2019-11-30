@@ -1,0 +1,134 @@
+.album
+  .album_top
+    .album_top_title
+      = @group.name
+      の6ヶ月から8ヶ月までのアルバム
+      .album_editbtn
+        %button.album_edit.btn 編集
+  .album_contents
+
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.brush?
+          %img.album_photo{:src => @group.brush}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.sleepingface2?
+          %img.album_photo{:src => @group.sleepingface2}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        brush
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :mhug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        sleepingface2
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :phug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.saycheese2?
+          %img.album_photo{:src => @group.saycheese2}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.high?
+          %img.album_photo{:src => @group.high}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        saycheese2
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :mhug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        high
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :phug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.mam?
+          %img.album_photo{:src => @group.mam}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.high2?
+          %img.album_photo{:src => @group.high2}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        mam
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :mhug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        high2
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :phug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+
+  .album_contents
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.looking?
+          %img.album_photo{:src => @group.looking}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.sit?
+          %img.album_photo{:src => @group.sit}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        looking
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :mhug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        sit
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :phug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+
