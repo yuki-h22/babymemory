@@ -6,7 +6,6 @@
       .album_editbtn
         %button.album_edit.btn 編集
   .album_contents
-
     .album_main
       .album_main_content
         .album_main_content_img
@@ -24,18 +23,18 @@
             %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
-        brush
+        歯ブラシデビュー
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :mhug, placeholder: "Image Url"
+              = f.text_field :brush, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
       .album_main_title
-        sleepingface2
+        可愛い寝顔
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :phug, placeholder: "Image Url"
+              = f.text_field :sleepingface2, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
 
     .album_main
@@ -55,18 +54,18 @@
             %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
-        saycheese2
+        こっちむーいて
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :mhug, placeholder: "Image Url"
+              = f.text_field :saycheese2, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
       .album_main_title
-        high
+        ずりばいはお手の物
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :phug, placeholder: "Image Url"
+              = f.text_field :high, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
 
     .album_main
@@ -86,18 +85,18 @@
             %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
-        mam
+        ママって言った！？
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :mhug, placeholder: "Image Url"
+              = f.text_field :mam, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
       .album_main_title
-        high2
+        ハイハイできた
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :phug, placeholder: "Image Url"
+              = f.text_field :high2, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
 
   .album_contents
@@ -118,17 +117,17 @@
             %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
-        looking
+        ママとパパはどこかなー？
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :mhug, placeholder: "Image Url"
+              = f.text_field :looking, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
       .album_main_title
-        sit
+        おすわりできました
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :phug, placeholder: "Image Url"
+              = f.text_field :sit, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
 
