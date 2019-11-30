@@ -29,7 +29,7 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    params.require(:group).permit(:name, :birthday, :image, :meimei, :mhug, :phug, :fphoto, :imhome, :finger, :bathing, :diapers, :hund, :walking, :bathingwith1, :sleepingface1, :discovery, :cream, :saycheese1, :neck, :bathingwith2, :get, :tooth, :roll, :babyfood, :brush, :sleepingface2, :saycheese2, :high, :mam, :high2, :looking, :sit, :stand, :high3, :straw, :sleepingface3, :saycheese3, :imitate, :go, :hair, :katikati, :follow, :pause, :walk, :yam, :sleepingface4, :saycheese4, :imitate2, {user_ids: [] })
+    params.require(:group).permit(:name, :birthday, :icon, :image, :meimei, :mhug, :phug, :fphoto, :imhome, :finger, :bathing, :diapers, :hund, :walking, :bathingwith1, :sleepingface1, :discovery, :cream, :saycheese1, :neck, :bathingwith2, :get, :tooth, :roll, :babyfood, :brush, :sleepingface2, :saycheese2, :high, :mam, :high2, :looking, :sit, :stand, :high3, :straw, :sleepingface3, :saycheese3, :imitate, :go, :hair, :katikati, :follow, :pause, :walk, :yam, :sleepingface4, :saycheese4, :imitate2, {user_ids: [] })
   end
 
   def set_group
