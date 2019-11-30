@@ -23,18 +23,18 @@
             %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
-        follow
+        パパとママの後をついてくよ
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :mhug, placeholder: "Image Url"
+              = f.text_field :follow, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
       .album_main_title
-        pause
+        つかまり立ちでポーズ
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :phug, placeholder: "Image Url"
+              = f.text_field :pause, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
 
     .album_main
@@ -54,18 +54,18 @@
             %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
-        walk
+        つたい歩きができました
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :mhug, placeholder: "Image Url"
+              = f.text_field :walk, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
       .album_main_title
-        yam
+        手づかみ食べでおいし〜い
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :phug, placeholder: "Image Url"
+              = f.text_field :yam, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
 
     .album_main
@@ -85,18 +85,18 @@
             %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
-        sleepingface4
+        可愛い寝顔
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :mhug, placeholder: "Image Url"
+              = f.text_field :sleepingface4, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
       .album_main_title
-        saycheese4
+        こっちむーいて
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :phug, placeholder: "Image Url"
+              = f.text_field :saycheese4, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
 
     .album_main
@@ -107,26 +107,26 @@
         - else
           .none_photo
             %img.album_none{:src => '/errer/akatyan02.png'}/
-      -# .album_main_content
-      -#   .album_main_content_img
-      -#   - if @group.あ?
-      -#     %img.album_photo{:src => @group.あ}/
-      -#   - else
-      -#     .none_photo
-      -#       %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.katikati?
+          %img.album_photo{:src => @group.katikati}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
-        imitate2
+        まねっこまねっこ
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :mhug, placeholder: "Image Url"
+              = f.text_field :imitate2, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
-      -# .album_main_title
-      -#   あ
-      -#   .album_updatebtn.hide
-      -#     = form_for(@group, local: true) do |f|
-      -#       = f.label :album_img, class: "album_update" do
-      -#         = f.text_field :phug, placeholder: "Image Url"
-      -#         = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        両手に持ってカチカチ
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :katikati, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
 
