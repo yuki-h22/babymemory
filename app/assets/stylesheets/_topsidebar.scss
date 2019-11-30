@@ -2,45 +2,39 @@
   height: 100%;
   width: 260px;
   border-right: solid;
-  background-color: #fff;
+  &_top{
+    height: 230px;
+    width: 200px;
+    margin: 0px auto;
+  }
+  #topicon{
+    width: 200px;
+  }
+  &_data{
+    widows: 100%;
+    height: 100px;
+    text-align: center;
+  }
+    &_name{
+      margin: 0px auto;
+    }
+    &_birthday{
+      margin: 0px auto;
+    }
+
+  &_under{
+    height: 50px;
+  }
+    &_image{
+      border-radius: 10px;
+    }
+
+  &_bottom{
+    &_message{
+        align-items: center;
+    }
+  }
 }
-
-.side_bar_top{
-  height: 150px;
-  width: 150px;
-}
-
-#topicon{
-  width: 200px;
-}
-
-.side_bar_data{
-  widows: 100%;
-  height: 100px;
-}
-
-.side_bar_data_name{
-  align-items: center;
-}
-
-.side_bar_data_birthday{
-  align-items: center;
-}
-
-.side_bar_under{
-  height: 50px;
-}
-.side_bar_under_image{
-  border-radius: 10px;
-}
-
-.side_bar_bottom{}
-
-.side_bar_bottom_message{
-    align-items: center;
-
-}
-
 
 .topicon{
   margin: 20px;
