@@ -1,22 +1,44 @@
+.top_page{
+  display: flex;
+  height: calc(100vh - 155px);
+}
 .toppage{
-  position: absolute;
-  top: 110px;
-  left: 300px;
-  float: right;
-  height: calc(100% - 130px);
-  width: calc(100% - 320px);
-  &_top{
-    height: 50px;
-  }
+  height: 100%;
+  width: calc(100% - 240px);
+  padding: 20px;
+  &_name{
+    text-align: center;
+    font-size: 40px;
+}
   &_content{
-    &_data{
+    &_data{margin: 0px auto;
       &_image{
-        font-size: 30px;
-        &_title{
-          align-items: center;
-        }
+        align-items: center;
       }
     }
-
+    &_title{
+      align-items: center;
+      text-align: center;
+      font-size: 40px;
+    }
   }
+}
+
+.none_photo_meimei{
+  margin-top: 50px;
+  margin-left: 100px;
+  padding-top: 120px;
+  padding-right: 100px;
+  border-radius: 10px;
+  border-style: dashed;
+  height: 340px;
+  width: calc(100% - 200px);
+  border-color: #00000086;
+}
+
+.album_none1{
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100px;
 }
