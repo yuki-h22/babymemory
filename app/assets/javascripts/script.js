@@ -19,6 +19,5 @@ $(function() {
 $(function(){
   $('.album_edit').click(function(){
     $('.album_updatebtn').removeClass('hide')
-    $(this).css('display','none');
   });
 });
