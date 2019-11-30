@@ -1,27 +1,38 @@
 .album_photo{
-  width: 500px;
+  width: 480px;
+}
+.none_photo{
+  margin-top: 50px;
+  margin-left: 50px;
+  padding-top: 120px;
+  border-radius: 10px;
+  border-style: dashed;
+  height: 340px;
+  border-color: #00000086;
+}
+.album_none{
+  width: 100px;
 }
 
 .album_editbtn{
 float: right;
 }
 
-.album_edit{
-
+.album_contents{
+  height: calc(100vh - 220px);
+  overflow-y: auto;
 }
 
 
 .album{
-  overflow-y: auto;
   width: 100%;
   padding-left: 40px;
   padding-right: 40px;
   &_top{
     width: calc(100% - 120px);
-    background-color: $bace_color;
-    text-align: center;
-    position: fixed;
+    margin: 0px auto;
     &_title{
+      text-align: center;
       font-size: 40px;
     }
   }
@@ -29,6 +40,13 @@ float: right;
     width: 100%;
     display: flex;
     justify-content: space-around;
+    overflow-y: auto;
+    &_content{
+      text-align: center;
+      &_img{
+        width: 300px;
+      }
+    }
     
     &_title{
       text-align: center;
