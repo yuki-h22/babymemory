@@ -12,23 +12,27 @@ float: right;
 
 
 .album{
-  padding: 0px 40px;
+  overflow-y: auto;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
   &_top{
+    width: calc(100% - 120px);
+    background-color: $bace_color;
     text-align: center;
-
+    position: fixed;
     &_title{
       font-size: 40px;
     }
   }
   &_main{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    overflow-y: auto;
-    &_content{
-      &_title{
-        text-align: center;
-        font-size: 20px;
-      }
+    justify-content: space-around;
+    
+    &_title{
+      text-align: center;
+      font-size: 20px;
     }
   }
 }
