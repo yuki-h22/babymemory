@@ -5,6 +5,7 @@
       の6ヶ月から8ヶ月までのアルバム
       .album_editbtn
         %button.album_edit.btn 編集
+  .album_contents
     .album_main
       .album_main_content
         .album_main_content_img
@@ -22,18 +23,18 @@
             %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
-        stand
+        初めてのたっち
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :mhug, placeholder: "Image Url"
+              = f.text_field :stand, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
       .album_main_title
-        high3
+        今日もハイハイどこまでも
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :phug, placeholder: "Image Url"
+              = f.text_field :high3, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
 
     .album_main
@@ -53,18 +54,18 @@
             %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
-        sleepingface3
+        可愛い寝顔
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :mhug, placeholder: "Image Url"
+              = f.text_field :sleepingface3, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
       .album_main_title
-        saycheese3
+        こっちむーいて
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :phug, placeholder: "Image Url"
+              = f.text_field :saycheese3, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
 
     .album_main
@@ -84,18 +85,18 @@
             %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
-        imitate
+        まねっこまねっこ
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :mhug, placeholder: "Image Url"
+              = f.text_field :imitate, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
       .album_main_title
-        go
+        パパを乗り越えママの元へ
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :phug, placeholder: "Image Url"
+              = f.text_field :go, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
 
     .album_main
@@ -115,17 +116,17 @@
             %img.album_none{:src => '/errer/akatyan02.png'}/
     .album_main
       .album_main_title
-        hair
+        今日はヘアカットの日
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :mhug, placeholder: "Image Url"
+              = f.text_field :hair, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
       .album_main_title
-        straw
+        ストロー飲みデビュー
         .album_updatebtn.hide
           = form_for(@group, local: true) do |f|
             = f.label :album_img, class: "album_update" do
-              = f.text_field :phug, placeholder: "Image Url"
+              = f.text_field :straw, placeholder: "Image Url"
               = f.submit '送信', class: 'album_update, btn'
 
