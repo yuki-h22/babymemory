@@ -1,9 +1,13 @@
+$bace_color: #FFFACD;
 .head{height: 50px;}
-.body{background-color:rgba(51, 173, 255, 0.911);height: 765px;}
+.body{background-color:rgba(51, 173, 255, 0.911);height: 100%;}
 .tab{overflow:hidden;margin: 0px 40px;}
 .tab li{background:#F0E68C; padding:10px 5px; float:left; margin-right:3px;text-align: center;margin: 0px 5px;}
-.tab li.select{background:#FFFACD;}
-.content li{background:#FFFACD; padding:20px; height: calc(100vh - 115px);overflow-y: auto;}
+.tab li.select{background:$bace_color;}
+.content li{background:$bace_color; padding:20px; height: calc(100vh - 115px);overflow-y: auto;}
 .hide {display:none;}
 .tab li{width: calc((100% - 200px)/8);border-top-left-radius: 20px 10px;border-top-right-radius: 20px 10px;height: 40px;}
 .create_baby {display:none;}
+
+
+// height: 765px
