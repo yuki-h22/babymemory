@@ -17,12 +17,26 @@
       = f.text_field :birthday, class: 'chat__group_birthday chat-group-form__input', placeholder: 'お誕生日'
   .chat-group-form__field
     .chat-group-form__field--left
-      %label.chat-group-form__label{for: "chat_group"} 写真
+      %label.chat-group-form__label{for: "chat_group"} アイコン写真
     .chat-group-form__field--right
-      = f.label :image, class: "input-box__image chat-group-form__input" do
-        = fa_icon 'picture-o'
-        写真を選ぶ
-        = f.file_field :image, class: 'file'
+      = f.label :icon, class: "album_update" do
+        = f.text_field :icon, placeholder: "Image Url"
+
+  .chat-group-form__field
+    .chat-group-form__field--left
+      %label.chat-group-form__label{for: "chat_group"} 命名写真
+    .chat-group-form__field--right
+      = f.label :meimei, class: "album_update" do
+        = f.text_field :meimei, placeholder: "Image Url"
+
+  .chat-group-form__field
+    .chat-group-form__field--left
+      %label.chat-group-form__label{for: "chat_group"} ベストショット
+    .chat-group-form__field--right
+      = f.label :image, class: "album_update" do
+        = f.text_field :image, placeholder: "Image Url"
+
+
   .chat-group-form__field
     .chat-group-form__field--left
       %label.chat-group-form__label{for: "chat_group_家族を追加"} 家族を追加
