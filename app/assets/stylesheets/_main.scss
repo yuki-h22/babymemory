@@ -1,6 +1,7 @@
 $wordcolor : #434a54;
 $topbtn_color : #38aef0;
 $sendbtn_color : #38aef0;
+$bace_color: #FFFACD;
 
 @mixin displayflex() {
   display: flex;
@@ -43,7 +44,7 @@ $sendbtn_color : #38aef0;
   &_center{
     overflow-y: auto;
     box-sizing: border-box;
-    background-color: #FFFACD;
+    background-color: $bace_color;
     height: calc(100vh - 240px);
     &_thread{
       width: 450px;
@@ -74,7 +75,7 @@ $sendbtn_color : #38aef0;
     box-sizing: border-box;
     height: 90px;
     padding: 20px 40px;
-    background-color: #FFFACD;
+    background-color: $bace_color;
     &_textbox{
       float: left;
       @include displayflex();
