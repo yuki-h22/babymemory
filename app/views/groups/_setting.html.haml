@@ -18,12 +18,6 @@
               %td= group.birthday
               %td
                 %img{:height => "20", :src => "group.image", :width => "20"}/
-              %td
-                %form{:action => "/group/group.id", :method => "post"}
-                  %input{:name => "_method", :type => "hidden", :value => "DELETE"}/
-                  %input{:name => "_token", :type => "hidden", :value => "{{ csrf_token() }}"}/
-                  %button.btn.btn-xs.btn-danger{"aria-label" => "Left Align", :type => "submit"}
-                    %span.glyphicon.glyphicon-trash
         - else
           %tr
             %td
