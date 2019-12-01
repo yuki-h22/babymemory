@@ -49,8 +49,6 @@ test:
 #
 production:
   <<: *default
-  adapter: mysql2
   database: <%= ENV['heroku_1210bfd54e1aba7?reconnect'] %>
   username: <%= ENV['b4f98ab59adc0c'] %>
   password: <%= ENV['832bbf08'] %>
-  socket: /var/lib/mysql/mysql.sock
