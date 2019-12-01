@@ -5,3 +5,19 @@
       <%= form.text_area :birthday%>
     <%= form.submit %>
   <% end %>
+
+
+.main
+  .main_top
+    .main_top_title
+      .main_top_title_upper
+        = @group.name
+      .main_top_title_under
+        Member :
+        - @group.users.each do |user|
+          = user.name
+    .main_top_btn
+      = form_for [@group] do |f|
+        = f.label :text, class: "group_edit_btn" do
+          = link_to edit_group_path(@group), class: "chat_edit_btn" do
+            Edit

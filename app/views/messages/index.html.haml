@@ -1,3 +1,23 @@
-.wrapper
-  = render "groups/side_bar"
-  = render "main_chat"
+%body.body
+  %header
+    %h1.head Baby memorY
+    = render 'groups/user_edit'
+  %ul.tab
+    %li.select TOP Page
+    %li ０〜2ヶ月
+    %li ３〜5ヶ月
+    %li ６〜8ヶ月
+    %li ９〜11ヶ月
+    %li １歳〜
+    %li アルバム
+    %li 設定
+  %ul.content
+    %li= render 'top_page'
+    %li.hide= render 'album02'
+    %li.hide= render 'album35'
+    %li.hide= render 'album68'
+    %li.hide= render 'album911'
+    %li.hide= render 'album1'
+    %li.hide= render "main_chat"
+    %li.hide= render 'groups/side_bar'
+  %footer.footer Copyright BabymemorY 2019.

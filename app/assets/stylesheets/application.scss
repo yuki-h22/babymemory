@@ -1,5 +1,5 @@
 @import "./reset";
-@import "./sidebar";
+@import "./useredit";
 @import "./main";
 // @import "font-awesome-sprockets";
 @import "./font-awesome";
@@ -7,7 +7,8 @@
 @import "config/colors";
 @import "modules/flash";
 @import "modules/group";
-@import "./sidebar2";
-@import "./main2";
+@import "./topsidebar";
+@import "./topmain";
 @import "./tab";
 @import "./app";
+@import "./album";

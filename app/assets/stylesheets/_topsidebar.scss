@@ -1,0 +1,104 @@
+.side_bar{
+  height: 100%;
+  width: 260px;
+  border-right: solid;
+  &_top{
+    position: relative;
+    top: 40px;
+    height: 230px;
+    width: 200px;
+    margin: 0px auto;
+  }
+  &_data{
+    widows: 100%;
+    height: 100px;
+    text-align: center;
+    &_name{
+      font-size: 30px;
+      margin: 0px auto;
+    }
+    &_birthday{
+      font-size: 14px;
+      margin: 0px auto;
+    }
+  }
+  &_under{
+    height: 50px;
+  }
+    &_image{
+      border-radius: 10px;
+    }
+
+  &_bottom{
+    &_message{
+        align-items: center;
+    }
+  }
+}
+
+#topicon{
+  position: relative;
+  width: 150px;
+  left: 20px;
+}
+
+.setting_photo{
+  position: relative;
+  width: 50px;
+  left: 20px;
+}
+
+
+.topicon{
+  margin: 20px;
+}
+
+.none_photo_side{
+  margin: 20px auto;
+  padding: 10px 60px;
+  border-radius: 10px;
+  border-style: dashed;
+  height: 120px;
+  width: calc(100% - 160px);
+  border-color: #00000086;
+}
+
+.none_photo_under{
+  margin: 20px auto;
+  padding: 10px 60px;
+  border-radius: 10px;
+  border-style: dashed;
+  height: 180px;
+  width: calc(100% - 160px);
+  border-color: #00000086;
+}
+
+.top_none{
+  position: relative;
+  width: 100px;
+  left: -50px;
+}
+
+.bottom_none{
+  position: relative;
+  width: 50px;
+  left: -50px;
+}
+
+
+.toppage_edit_btn{
+  position: relative;
+  height: 200px;
+  width: 250px;
+}
+.album_edit{
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+}
+
+#topmeimei{
+  position: relative;
+  width: 150px;
+  left: 15%;
+}

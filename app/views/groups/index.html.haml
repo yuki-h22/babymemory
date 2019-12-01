@@ -1,21 +1,24 @@
-%body
+%body.body
   %header
     %h1.head Baby memorY
+    = render 'user_edit'
+
   %ul.tab
-    %li TOP Page
+    %li.select TOP Page
     %li ０〜2ヶ月
     %li ３〜5ヶ月
     %li ６〜8ヶ月
     %li ９〜11ヶ月
     %li １歳〜
     %li アルバム
-    %li.select 設定
+    %li 設定
   %ul.content
-    %li.hide 
-    %li.hide @yield('photo02')
-    %li.hide @yield('photo35')
-    %li.hide @yield('photo68')
-    %li.hide @yield('photo911')
-    %li.hide @yield('photo1')
-    %li.hide @yield('otheralbum')
     %li= render 'side_bar'
+    %li.hide 
+    %li.hide 
+    %li.hide 
+    %li.hide 
+    %li.hide 
+    %li.hide 
+    %li.hide= render 'side_bar'
+  %footer Copyright BabymemorY 2019.

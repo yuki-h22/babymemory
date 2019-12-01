@@ -1,27 +1,13 @@
-.main
-  .main_top
-    .main_top_title
-      .main_top_title_upper
-        = @group.name
-      .main_top_title_under
-        Member :
-        - @group.users.each do |user|
-          = user.name
-    .main_top_btn
-      = form_for [@group] do |f|
-        = f.label :text, class: "group_edit_btn" do
-          = link_to edit_group_path(@group), class: "chat_edit_btn" do
-            Edit
-  .main_center
-    = render @messages
-  .main_bottom
-    = form_for [@group, @message] do |f|
-      .main_bottom_textbox
-        .main_bottom_textbox_text
-          = f.text_field :content, class: 'form__message', placeholder: 'type a message', style: "border: none"
-        .main_bottom_textbox_img
-          = f.label :image, class: "input-box__image" do
-            = fa_icon 'picture-o'
-            = f.file_field :image, class: 'file'
-      .main_bottom_send
-        = f.submit 'Send', class: 'form__submit'
+.main_center
+  = render @messages
+.main_bottom
+  = form_for [@group, @message] do |f|
+    .main_bottom_textbox
+      .main_bottom_textbox_text
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message', style: "border: none"
+      .main_bottom_textbox_img
+        = f.label :image, class: "input-box__image" do
+          = fa_icon 'picture-o'
+          = f.file_field :image, class: 'file'
+    .main_bottom_send
+      = f.submit 'Send', class: 'form__submit'

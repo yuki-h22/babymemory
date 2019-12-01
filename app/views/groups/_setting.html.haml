@@ -1,45 +1,5 @@
-.container.ops-main
-  .row
-    .col-md-12
-      %h3.ops-title 赤ちゃんたち
-  .row
-    .col-md-11.col-md-offset-1
-      %table.table.text-center
-        %tr
-          %th.text-center おなまえ
-          %th.text-center お誕生日
-          %th.text-center 写真
-          %th.text-center 削除
-        - if (@groups != nil)
-          - @groups.each do |group|
-            %tr
-              %td
-                %a{:href => "/group/group.id"}= group.name
-              %td= group.birthday
-              %td
-                %img{:height => "20", :src => "group.image", :width => "20"}/
-              %td
-                %form{:action => "/group/group.id", :method => "post"}
-                  %input{:name => "_method", :type => "hidden", :value => "DELETE"}/
-                  %input{:name => "_token", :type => "hidden", :value => "{{ csrf_token() }}"}/
-                  %button.btn.btn-xs.btn-danger{"aria-label" => "Left Align", :type => "submit"}
-                    %span.glyphicon.glyphicon-trash
-        - else
-          %tr
-            %td
-              .text-center まだ登録されていません
-      = link_to "/groups/new", method: :get
-      %button.btn.btn-default 赤ちゃんが生まれたよ
-  .create_baby.under_box
-    %label{:for => "name"} おなまえ
-    %input.form-control{:name => "name", :type => "text"}/
-    .form-group
-      %label{:for => "price"} お誕生日
-      %input.form-control{:name => "birthday", :type => "text"}/
-    .form-group
-      %label{:for => "image"} 写真
-      %fieldset
-        %div
-          %input#file{:name => "imagefile", :type => "file"}/
-    %button.btn.btn-default{:type => "submit"} 登録
-    %a{:href => "/group"} 戻る
+.selectpage
+  .selectpage_top
+    %img.setting_photo{:src => '/errer/kumausagi.png'}/
+  .selectpage_message
+    まず赤ちゃんを選択しよう

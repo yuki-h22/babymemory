@@ -1,0 +1,49 @@
+.top_page{
+  display: flex;
+  height: calc(100vh - 155px);
+}
+.toppage{
+  height: 100%;
+  width: calc(100% - 240px);
+  padding: 20px;
+  &_name{
+    text-align: center;
+    font-size: 40px;
+}
+  &_content{
+    &_data{margin: 0px auto;
+      &_image{
+        align-items: center;
+      }
+    }
+    &_title{
+      align-items: center;
+      text-align: center;
+      font-size: 40px;
+    }
+  }
+}
+
+.none_photo_image{
+  margin-top: 50px;
+  margin-left: 100px;
+  padding-top: 120px;
+  padding-right: 100px;
+  border-radius: 10px;
+  border-style: dashed;
+  height: 340px;
+  width: calc(100% - 200px);
+  border-color: #00000086;
+}
+
+.album_none1{
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100px;
+}
+#top_photo{
+  position: relative;
+  left: 25%;
+  width: 480px;
+}

@@ -1,0 +1,45 @@
+.top_page
+  .side_bar
+    .side_bar_top
+      .side_bar_top_image
+        - if @group.icon?
+          %img#topicon{:src => @group.icon}/
+        - else
+          .none_photo_side
+            %img.top_none{:src => '/errer/akatyan02.png'}/
+
+    .side_bar_data
+      .side_bar_data_name
+        = @group.name
+      .side_bar_data_birthday
+        = @group.birthday
+        生
+    .side_bar_under
+      .side_bar_under_image
+        - if @group.meimei?
+          %img#topmeimei{:src => @group.meimei}/
+        - else
+          .none_photo_under
+            %img.top_none{:src => '/errer/meimei.jpeg'}/
+    .side_bar_bottom
+      .side_bar_bottom_message
+    .toppage_edit_btn
+      =link_to edit_group_path(@group), class: "edit_btn" do
+        %button.album_edit.btn 編集
+
+
+  .toppage
+    .toppage_name
+      = @group.name
+      のお部屋
+    .toppage_content
+      .toppage_content_data
+        .toppage_content_data_image
+          - if @group.image?
+            %img#top_photo{:src => @group.image}/
+          - else
+            .none_photo_image
+              %img.album_none1{:src => '/errer/akatyan02.png'}/
+      .toppage_content_title
+        ママ・パパこれからずっとよろしくね
+      .toppage_content_comment

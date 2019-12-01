@@ -1,0 +1,133 @@
+.album
+  .album_top
+    .album_top_title
+      = @group.name
+      の6ヶ月から8ヶ月までのアルバム
+      .album_editbtn
+        %button.album_edit.btn 編集
+  .album_contents
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.brush?
+          %img.album_photo{:src => @group.brush}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.sleepingface2?
+          %img.album_photo{:src => @group.sleepingface2}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        歯ブラシデビュー
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :brush, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        可愛い寝顔
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :sleepingface2, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.saycheese2?
+          %img.album_photo{:src => @group.saycheese2}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.high?
+          %img.album_photo{:src => @group.high}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        こっちむーいて
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :saycheese2, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        ずりばいはお手の物
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :high, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.mam?
+          %img.album_photo{:src => @group.mam}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.high2?
+          %img.album_photo{:src => @group.high2}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        ママって言った！？
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :mam, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        ハイハイできた
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :high2, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+
+  .album_contents
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.looking?
+          %img.album_photo{:src => @group.looking}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.sit?
+          %img.album_photo{:src => @group.sit}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        ママとパパはどこかなー？
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :looking, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        おすわりできました
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :sit, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+

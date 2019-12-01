@@ -1,0 +1,159 @@
+.album
+  .album_top
+    .album_top_title
+      = @group.name
+      が生まれてから2ヶ月までのアルバム
+      .album_editbtn
+        %button.album_edit.btn 編集
+  .album_contents
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.mhug?
+          %img.album_photo{:src => @group.mhug}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.phug?
+          %img.album_photo{:src => @group.phug}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        初めてのママだっこ
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :mhug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        初めてのパパだっこ
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :phug, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.fphoto?
+          %img.album_photo{:src => @group.fphoto}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.imhome?
+          %img.album_photo{:src => @group.imhome}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        初めての家族写真
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :fphoto, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        ようこそ我が家へ！
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :imhome, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.finger?
+          %img.album_photo{:src => @group.finger}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.bathing?
+          %img.album_photo{:src => @group.bathing}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        指をぎゅっと掴まれた
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :finger, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        沐浴デビュー
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :bathing, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.diapers?
+          %img.album_photo{:src => @group.diapers}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.hund?
+          %img.album_photo{:src => @group.hund}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        初めてのオムツ替え
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :diapers, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        小さなおてて
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :hund, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+
+    .album_main
+      .album_main_content
+        .album_main_content_img
+        - if @group.walking?
+          %img.album_photo{:src => @group.walking}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+      .album_main_content
+        .album_main_content_img
+        - if @group.bathingwith1?
+          %img.album_photo{:src => @group.bathingwith1}/
+        - else
+          .none_photo
+            %img.album_none{:src => '/errer/akatyan02.png'}/
+    .album_main
+      .album_main_title
+        お散歩デビュー
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :walking, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
+      .album_main_title
+        一緒にお風呂
+        .album_updatebtn.hide
+          = form_for(@group, local: true) do |f|
+            = f.label :album_img, class: "album_update" do
+              = f.text_field :bathingwith1, placeholder: "Image Url"
+              = f.submit '送信', class: 'album_update, btn'
