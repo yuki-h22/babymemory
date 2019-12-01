@@ -42,9 +42,9 @@
   left: 20px;
 }
 
-#topmeimei{
+.setting_photo{
   position: relative;
-  width: 150px;
+  width: 50px;
   left: 20px;
 }
 
@@ -62,19 +62,43 @@
   width: calc(100% - 160px);
   border-color: #00000086;
 }
-.album_none2{
+
+.none_photo_under{
+  margin: 20px auto;
+  padding: 10px 60px;
+  border-radius: 10px;
+  border-style: dashed;
+  height: 180px;
+  width: calc(100% - 160px);
+  border-color: #00000086;
+}
+
+.top_none{
   position: relative;
   width: 100px;
   left: -50px;
 }
 
+.bottom_none{
+  position: relative;
+  width: 50px;
+  left: -50px;
+}
+
+
 .toppage_edit_btn{
   position: relative;
-  height: 150px;
+  height: 200px;
   width: 250px;
 }
 .album_edit{
   position: absolute;
   right: 10px;
   bottom: 0px;
+}
+
+#topmeimei{
+  position: relative;
+  width: 150px;
+  left: 15%;
 }
