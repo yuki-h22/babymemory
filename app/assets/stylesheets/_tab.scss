@@ -1,5 +1,5 @@
 $bace_color: #FFFACD;
-.head{height: 50px;}
+.head{height: 50px;font-family:cursive;}
 .body{background-color:rgba(51, 173, 255, 0.911);height: 100%;}
 .tab{overflow:hidden;margin: 0px 40px;}
 .tab li{background:#F0E68C; padding:10px 5px; float:left; margin-right:3px;text-align: center;margin: 0px 5px;}
@@ -13,4 +13,5 @@ $bace_color: #FFFACD;
 // height: 765px
 .setting_photo{
   width: 30px;
+  left: 0%;
 }
