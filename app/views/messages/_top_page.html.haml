@@ -6,7 +6,7 @@
           %img#topicon{:src => @group.icon}/
         - else
           .none_photo_side
-            %img.album_none2{:src => '/errer/akatyan02.png'}/
+            %img.top_none{:src => '/errer/akatyan02.png'}/
 
     .side_bar_data
       .side_bar_data_name
@@ -19,8 +19,8 @@
         - if @group.meimei?
           %img#topmeimei{:src => @group.meimei}/
         - else
-          .none_photo_side
-            %img.album_none2{:src => '/errer/akatyan02.png'}/
+          .none_photo_under
+            %img.top_none{:src => '/errer/meimei.jpeg'}/
     .side_bar_bottom
       .side_bar_bottom_message
     .toppage_edit_btn
