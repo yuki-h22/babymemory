@@ -9,6 +9,7 @@
           %th.text-center おなまえ
           %th.text-center お誕生日
           %th.text-center 写真
+          -# %th.text-center 削除
           - current_user.groups.each do |group|
             .baby_group
             %tr
@@ -23,12 +24,12 @@
                 - else
                   .none_photo_set
                     %img.setting_photo{:src => '/errer/akatyan02.png'}/
-              %td
-                %form{:action => "/group/group.id", :method => "post"}
-                  %input{:name => "_method", :type => "hidden", :value => "DELETE"}/
-                  %input{:name => "_token", :type => "hidden", :value => "{{ csrf_token() }}"}/
-                  %button.btn.btn-xs.btn-danger{"aria-label" => "Left Align", :type => "submit"}
-                    %span.glyphicon.glyphicon-trash
+              -# %td
+              -#   %form{:action => "/group/group.id", :method => "post"}
+              -#     %input{:name => "_method", :type => "hidden", :value => "DELETE"}/
+              -#     %input{:name => "_token", :type => "hidden", :value => "{{ csrf_token() }}"}/
+              -#     %button.btn.btn-xs.btn-danger{"aria-label" => "Left Align", :type => "submit"}
+              -#       %span.glyphicon.glyphicon-trash
   .row
     = link_to new_group_path, class: "new_btn" do
       %button.btn.btn-default 赤ちゃんが生まれたよ
