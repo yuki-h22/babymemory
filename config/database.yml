@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
+  adapter: mysql2
   database: babymemory_production
   username: babymemory
   password: <%= ENV['BABYMEMORY_DATABASE_PASSWORD'] %>
