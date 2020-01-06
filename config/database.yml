@@ -49,7 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['heroku_1210bfd54e1aba7?reconnect'] %>
-  username: <%= ENV['b4f98ab59adc0c'] %>
-  password: <%= ENV['832bbf08'] %>
+  database: babymemory_production
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
