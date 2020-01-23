@@ -1,29 +1,32 @@
 $(function() {
   //クリックしたときのファンクションをまとめて指定
-  $('.tab li').click(function(){
+  $(".tab li").click(function() {
     //.index()を使いクリックされたタブが何番目かを調べ、
     //indexという変数に代入します。
-    var index = $('.tab li').index(this);
+    var index = $(".tab li").index(this);
     //コンテンツを一度消して、すべて非表示にし、
-    $('.content li').removeClass('hide');
-    $('.content li').css('display','none');
+    $(".content li").removeClass("hide");
+    $(".content li").css("display", "none");
     //クリックされたタブと同じ順番のコンテンツを表示します。
-    $('.content li').eq(index).css('display','block');
+    $(".content li")
+      .eq(index)
+      .css("display", "block");
     //一度タブについているクラスselectを消し、
-    $('.tab li').removeClass('select');
+    $(".tab li").removeClass("select");
     //クリックされたタブのみにクラスselectをつけます。
-    $(this).addClass('select')
+    $(this).addClass("select");
   });
 });
 
-$(function(){
-  $('.album_edit').click(function(){
-    $('.album_updatebtn').removeClass('hide')
+$(function() {
+  $(".album_edit").click(function() {
+    $(".album_updatebtn").removeClass("hide");
   });
 });
 
-$(function () {
-  $('.readme_btn').click(function () {
-    $('.readme').removeClass('hide');
+$(function() {
+  $(".readme_btn").click(function() {
+    $(".readme").removeClass("hide");
+    $(".setting_underbox").addClass("hide");
   });
-})
+});

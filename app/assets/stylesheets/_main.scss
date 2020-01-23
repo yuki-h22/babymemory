@@ -1,126 +1,123 @@
-$wordcolor : #434a54;
-$topbtn_color : #38aef0;
-$sendbtn_color : #38aef0;
-$bace_color: #FFFACD;
+$wordcolor: #434a54;
+$topbtn_color: #38aef0;
+$sendbtn_color: #38aef0;
+$bace_color: #fffacd;
 
 @mixin displayflex() {
   display: flex;
   align-items: center;
 }
 
-.main{
-  &_top{
+.main {
+  &_top {
     display: flex;
     padding-left: 40px;
     padding-right: 40px;
     border-bottom: solid 2px #eeeeee;
-    &_title{
+    &_title {
       float: left;
-      &_upper{
+      &_upper {
         font-size: 20px;
         color: #140707;
         padding-top: 35px;
       }
-      &_under{
+      &_under {
         font-size: 12px;
         color: #999999;
         padding-top: 15px;
       }
     }
-    &_btn{
+    &_btn {
       margin: 28px 0 auto auto;
       color: $topbtn_color;
       border: solid 0.3px $topbtn_color;
-      .chat_edit_btn{
+      .chat_edit_btn {
         text-decoration: none;
         color: $topbtn_color;
       }
-      .edit_group{
+      .edit_group {
         padding: 8px 20px;
-        
       }
     }
   }
-  &_center{
+  &_center {
     overflow-y: auto;
     box-sizing: border-box;
     background-color: $bace_color;
     height: calc(100vh - 240px);
-    &_thread{
+    &_thread {
       width: 450px;
       padding-left: 40px;
-      padding-right: 40px;  
+      padding-right: 40px;
       padding-top: 46px;
-      &_upper-message{
+      &_upper-message {
         display: flex;
-        &_name{
+        &_name {
           font-size: 16px;
           font-weight: bold;
           color: $wordcolor;
         }
-        &_date{
+        &_date {
           font-size: 12px;
           color: #999999;
           margin-left: 10px;
         }
       }
-      &_lower-message{
+      &_lower-message {
         font-size: 14px;
         color: $wordcolor;
         margin-top: 10px;
       }
     }
   }
-  &_bottom{
+  &_bottom {
     box-sizing: border-box;
     height: 90px;
     padding: 20px 40px;
     background-color: $bace_color;
-    &_textbox{
+    &_textbox {
       float: left;
       @include displayflex();
       width: calc(100% - 122px);
-      &_text{
+      &_text {
         font-size: 16px;
         color: $wordcolor;
         height: 50px;
         width: 100%;
         margin-right: -20px;
       }
-      .form__message{
+      .form__message {
         height: 50px;
       }
-      &_img{
+      &_img {
         background-color: rgba(255, 255, 255, 0);
         float: right;
         padding-right: 30px;
         font-size: 20px;
       }
-      
     }
-    
-    &_send{
+
+    &_send {
       float: right;
     }
   }
 }
 
-.file{
+.file {
   display: none;
 }
 
-.message_image{
+.message_image {
   float: left;
 }
 
-.form__message{
+.form__message {
   height: 40px;
   width: 100%;
   padding-left: 10px;
-
 }
 
-.form__submit{
+.form__submit {
   margin-top: 2px;
   margin-left: 5px;
   padding: 10px 30px;
@@ -128,4 +125,11 @@ $bace_color: #FFFACD;
   width: 100px;
   border: solid 1px $sendbtn_color;
   background-color: $sendbtn_color;
+}
+
+.setting_underbox {
+  margin-top: 20px;
+}
+.readme_box {
+  margin-top: 40px;
 }
