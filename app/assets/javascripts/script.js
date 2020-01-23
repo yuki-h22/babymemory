@@ -21,3 +21,9 @@ $(function(){
     $('.album_updatebtn').removeClass('hide')
   });
 });
+
+$(function () {
+  $('.readme_btn').click(function () {
+    $('.readme').removeClass('hide');
+  });
+})
