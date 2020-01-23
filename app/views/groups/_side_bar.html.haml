@@ -9,7 +9,6 @@
           %th.text-center おなまえ
           %th.text-center お誕生日
           %th.text-center 写真
-          -# %th.text-center 削除
           - current_user.groups.each do |group|
             .baby_group
             %tr
@@ -23,13 +22,25 @@
                   %img.setting_photo{:src => group.icon}/
                 - else
                   .none_photo_set
-                    %img.setting_photo{:src => '/errer/akatyan02.png'}/
-              -# %td
-              -#   %form{:action => "/group/group.id", :method => "post"}
-              -#     %input{:name => "_method", :type => "hidden", :value => "DELETE"}/
-              -#     %input{:name => "_token", :type => "hidden", :value => "{{ csrf_token() }}"}/
-              -#     %button.btn.btn-xs.btn-danger{"aria-label" => "Left Align", :type => "submit"}
-              -#       %span.glyphicon.glyphicon-trash
+                    %img.setting_photo{:src => '/error/akatyan02.png'}/
   .row
     = link_to new_group_path, class: "new_btn" do
       %button.btn.btn-default 赤ちゃんが生まれたよ
+  .row
+    .setting_underbox
+      %button.btn.readme_btn このアプリの使い方
+  .readme.hide
+    .readme_box
+      使い方<br>
+      1. 「赤ちゃんが生まれたよ」ボタンを押して、赤ちゃんの情報を登録してください。(編集可能)<br>
+      2. 追加したい家族がいれば、同様に登録をし、家族を追加のところに名前を入力すると<br>
+      候補が出るので、選択して追加してください。<br>
+      3. 赤ちゃんの登録が終わったら名前をクリック<br>
+      4.TopPageの左上がアイコン、そのしたが命名写真、そして真ん中に大きくベストショット写真が表示されます。<br>
+      5.編集したい場合は、命名写真の下側にある「編集」ボタンを押してください。<br>
+      6.家族の編集も同様にこのボタンから行います。<br>
+      7.タブにはそれぞれ月齢が設定されています。クリックすると、それぞれのイベントごとに写真を投稿できるようになっています。<br>
+      投稿には右下の「編集」ボタンをクリックすることで可能です。<br>
+      8.「アルバム」タブはコメントをつけて自由に投稿することができます。<br>
+      9.ログアウトは画面右上の、ご自身のお名前をクリックすることで可能です。<br>
+    %h1 それでは"HappyLife"をお送りください
